@@ -56,4 +56,5 @@
 
 .tasks__button--remove:hover {
     color: darkred;
+    transform: scale(1.1);
 }

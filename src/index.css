@@ -21,31 +21,43 @@ body {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
+  overflow: hidden;
+  background-attachment: fixed;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .container {
       padding: 15px;
+      width: 100%;
   }
 
   form {
       flex-direction: column;
       align-items: stretch;
+      width: 100%;
   }
 
   form input[type="text"] {
       margin-right: 0;
       margin-bottom: 10px;
+      width: 100%;
   }
 
   form button {
       width: 100%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
   li {
@@ -53,6 +65,7 @@ ul {
       align-items: flex-start;
       padding: 15px;
       margin-bottom: 15px;
+      width: 100%;
   }
 
   li .done,
@@ -64,10 +77,15 @@ ul {
 
   h1 {
       font-size: 1.5rem;
+      text-align: center;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    background-size: contain;
+  }
+
   h1 {
       font-size: 1.2rem;
   }

@@ -26,3 +26,7 @@
     background-color: #cccccc;
     cursor: not-allowed;
 }
+
+.buttons__button:active {
+    transform: scale(0.98); 
+}

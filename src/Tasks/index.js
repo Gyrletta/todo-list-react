@@ -18,10 +18,8 @@ const Tasks = ({tasks, hideDoneTasks}) => (
             🗑️
             </button>
             </li>
-            
         ))}
     </ul>
-
 );
 
 export default Tasks;

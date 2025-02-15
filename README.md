@@ -16,7 +16,7 @@ JavaScript: Adds interactivity and dynamic functionality to web/app.
 
 ## Application Preview
 
-![Task List App Screenshot](./listtodo.png)
+![Task List App Screenshot](./public/ToDoList.PNG)
 
 ## Getting Started with Create React App
 

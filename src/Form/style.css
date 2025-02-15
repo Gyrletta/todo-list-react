@@ -1,13 +1,9 @@
-
-
-
 .form {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 20px;
 }
-
 
 .form__input {
     flex-grow: 1;
@@ -23,7 +19,6 @@
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 225, 0.5);
 }
-
 
 .form__input.input-error {
     border: 1px solid gray;

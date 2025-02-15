@@ -5,14 +5,18 @@
 Task List is a simple React application for managing a to-do list. It allows users to add, remove, and mark tasks as completed. The project was initialized using Create React App, making development and deployment easier.
 
 ## Technologies used:
+
 HTML: Definies the structure and content of web/app.
 CSS: Styles the appearance of web/app.
 JavaScript: Adds interactivity and dynamic functionality to web/app.
 
 ## Demo:
+
 [Demo](https://gyrletta.github.io/todo-list-react/)
 
+## Application Preview
 
+![Task List App Screenshot](./listtodo.png)
 
 ## Getting Started with Create React App
 
@@ -27,7 +31,6 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
 
 ###### `npm run build`
 
@@ -50,4 +53,5 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 #### Contact Me:
+
 [Contact Me](##)

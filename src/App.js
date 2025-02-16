@@ -7,7 +7,7 @@ import Header from "./Header";
 import Container from "./Container";
 import tasks from "./Tasks/tasksData";
 
-const hideDoneTasks = false;
+const hideDone = false;
 
 function App() {
   return (

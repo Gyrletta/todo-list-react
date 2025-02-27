@@ -2,19 +2,21 @@ html {
   box-sizing: border-box;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
 }
 
 body {
   background-image: url("../public/background.png");
-  background-size: cover;    
-  background-position: center; 
-  background-repeat: no-repeat; 
-  width: 100vw; 
-  height: 100vh; 
-  font-family: 'Lato', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -34,24 +36,23 @@ ul {
 
 @media (max-width: 768px) {
   .container {
-      padding: 15px;
-      width: 100%;
+    grid-template-columns: 1fr;
   }
 
   form {
-      flex-direction: column;
-      align-items: stretch;
-      width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
   }
 
   form input[type="text"] {
-      margin-right: 0;
-      margin-bottom: 10px;
-      width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
   }
 
   form button {
-      width: 100%;
+    width: 100%;
   }
 
   ul {
@@ -61,23 +62,23 @@ ul {
   }
 
   li {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 15px;
-      margin-bottom: 15px;
-      width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 100%;
   }
 
   li .done,
   li .remove {
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
 
   h1 {
-      font-size: 1.5rem;
-      text-align: center;
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
 
@@ -87,21 +88,21 @@ ul {
   }
 
   h1 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   li .task-content {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   form input[type="text"] {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   li .done,
   li .remove {
-      width: 35px;
-      height: 35px;
-      font-size: 18px;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
   }
 }

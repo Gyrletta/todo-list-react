@@ -1,23 +1,25 @@
 .section {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .section__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .section__title {
-    font-size: 1.5rem;
-    color: #333;
+  font-size: 20px;
+  margin: 0;
 }
 
 .section__body {
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

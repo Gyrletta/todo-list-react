@@ -1,6 +1,6 @@
 import React from "react";
-import { MainContainer } from "./styled";
+import { Wrapper } from "./styled";
 
-const Container = ({ children }) => <MainContainer>{children}</MainContainer>;
+const Container = ({ children }) => <Wrapper>{children}</Wrapper>;
 
 export default Container;

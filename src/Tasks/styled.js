@@ -1,65 +1,71 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const TasksList = styled.ul`
+export const List = styled.ul`
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin: 0px;
 `;
 
-export const TaskItem = styled.li`
-  display: flex;
-  justify-content: space-between;
+export const Item = styled.li`
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 10px;
   align-items: center;
   padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.alto};
 
   &:hover {
-    background-color: #f1f1f1;
+    filter: brightness(110%);
   }
 
   &.tasks__item--hidden {
     display: none;
   }
+
+  ${({ hidden }) =>
+    hidden &&
+    css`
+      display: none;
+    `}
 `;
 
-export const TaskContent = styled.span`
+export const Content = styled.span`
   ${({ done }) =>
     done &&
-    `
-    text-decoration: line-through;
-    color: #888;
-  `}
+    css`
+      text-decoration: line-through;
+    `}
 `;
 
-export const ToggleDoneButton = styled.button`
-  background: none;
+export const Button = styled.button`
   border: none;
+  color: ${({ theme }) => theme.colors.white};
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  transition: filter 0.3s;
   cursor: pointer;
-  width: 25px;
-  height: 25px;
-  margin-right: 15px;
-  background-color: green;
-  position: relative;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &:hover {
-    background-color: darkgreen;
-    transform: scale(1.1);
+  ${({ toggleDone }) =>
+    toggleDone &&
+    css`
+      background: ${({ theme }) => theme.colors.green};
+    `}
+
+  ${({ remove }) =>
+    remove &&
+    css`
+      background: ${({ theme }) => theme.colors.red};
+    `}
+
+ &:hover {
+    filter: brightness(110%);
   }
-`;
 
-export const RemoveButton = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  color: red;
-
-  &:hover {
-    color: darkred;
-    transform: scale(1.1);
+  &:active {
+    filter: brightness(120%);
   }
 `;

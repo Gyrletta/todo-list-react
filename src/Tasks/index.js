@@ -1,29 +1,20 @@
 import React from "react";
-import {
-  TasksList,
-  TaskItem,
-  TaskContent,
-  ToggleDoneButton,
-  RemoveButton,
-} from "./styled";
+import { List, Item, Content, Button } from "./styled";
 
 const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
-  <TasksList>
+  <List>
     {tasks.map((task) => (
-      <TaskItem
-        className={task.done && hideDone ? "tasks__item--hidden" : ""}
-        key={task.id}
-      >
-        <ToggleDoneButton onClick={() => toggleTaskDone(task.id)}>
+      <Item key={task.id} hidden={task.done && hideDone}>
+        <Button toggleDone onClick={() => toggleTaskDone(task.id)}>
           {task.done ? "✔" : ""}
-        </ToggleDoneButton>
-        <TaskContent done={task.done}>
-          {task.id} - {task.content}
-        </TaskContent>
-        <RemoveButton onClick={() => removeTask(task.id)}>🗑️</RemoveButton>
-      </TaskItem>
+        </Button>
+        <Content done={task.done}>{task.content}</Content>
+        <Button remove onClick={() => removeTask(task.id)}>
+          🗑️
+        </Button>
+      </Item>
     ))}
-  </TasksList>
+  </List>
 );
 
 export default Tasks;

@@ -5,58 +5,15 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
-
-const getInitialTaks = () => {
-  const tasksLocalStorage = localStorage.getItem("tasks");
-
-  return tasksLocalStorage ? JSON.parse(tasksLocalStorage) : [];
-};
+import useTasks from "./Hooks/useTasks";
 
 function App() {
+  const { tasks, removeTask, toggleTaskDone, markAllAsDone, addNewTask } =
+    useTasks();
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState(getInitialTaks);
-
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
-  };
-
-  const removeTask = (id) => {
-    setTasks((tasks) => tasks.filter((task) => task.id !== id));
-  };
-
-  const toggleTaskDone = (id) => {
-    setTasks((tasks) =>
-      tasks.map((task) => {
-        if (task.id === id) {
-          return { ...task, done: !task.done };
-        }
-
-        return task;
-      })
-    );
-  };
-
-  const markAllAsDone = () => {
-    setTasks((prevTasks) => prevTasks.map((task) => ({ ...task, done: true })));
-  };
-
-  const addNewTask = (content) => {
-    if (!content.trim()) {
-      return;
-    }
-
-    setTasks((tasks) => [
-      ...tasks,
-      {
-        content,
-        done: false,
-        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-      },
-    ]);
   };
 
   return (

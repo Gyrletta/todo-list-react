@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import { theme } from "./theme";
 import { addTask } from "./features/tasks/tasksSlice";
 import store from "./store";
+import { configureStore } from "@reduxjs/toolkit";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/todo-list-react/static/css/main.fe3b05c4.css",
-    "main.js": "/todo-list-react/static/js/main.66a7d5d4.js",
+    "main.js": "/todo-list-react/static/js/main.e140a7a6.js",
     "static/js/488.ea9e574d.chunk.js": "/todo-list-react/static/js/488.ea9e574d.chunk.js",
     "static/media/lato-latin-300.woff": "/todo-list-react/static/media/lato-latin-300.4d96f9e685a54d1ef6cf.woff",
     "static/media/lato-latin-700italic.woff": "/todo-list-react/static/media/lato-latin-700italic.be7f3d32a138ba64b9d0.woff",
@@ -25,11 +25,11 @@
     "static/media/lato-latin-100italic.woff2": "/todo-list-react/static/media/lato-latin-100italic.89b95baaf00652c7c3af.woff2",
     "index.html": "/todo-list-react/index.html",
     "main.fe3b05c4.css.map": "/todo-list-react/static/css/main.fe3b05c4.css.map",
-    "main.66a7d5d4.js.map": "/todo-list-react/static/js/main.66a7d5d4.js.map",
+    "main.e140a7a6.js.map": "/todo-list-react/static/js/main.e140a7a6.js.map",
     "488.ea9e574d.chunk.js.map": "/todo-list-react/static/js/488.ea9e574d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe3b05c4.css",
-    "static/js/main.66a7d5d4.js"
+    "static/js/main.e140a7a6.js"
   ]
 }

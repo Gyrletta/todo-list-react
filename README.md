@@ -10,6 +10,7 @@ Task List is a simple React application for managing a to-do list. It allows use
 - **CSS**: Styles the appearance of the web/app.
 - **JavaScript**: Adds interactivity and dynamic functionality to the web/app.
 - **React**: The powerful JavaScript library for building the user interface.
+- **Redux Toolkit**: Manages the global state of the application efficiently.
 
 ## 🚀 Demo
 

@@ -1,6 +1,14 @@
-import { debounce, call, put, delay, select } from "redux-saga/effects";
+import {
+  debounce,
+  call,
+  put,
+  delay,
+  select,
+  takeEvery,
+} from "redux-saga/effects";
 import { fetchExampleTasks, selectTasks, setTasks } from "./tasksSlice";
 import { getExampleTasks } from "./getExampleTasks";
+import { saveTasksInLocalStorage } from "./tasksLocalStorage";
 
 function* fetchExampleTasksHendler() {
   try {
@@ -15,7 +23,13 @@ function* fetchExampleTasksHendler() {
   }
 }
 
-export function* watchFetchExampleTasks() {
+function* saveTasksInLocalStorageHandler() {
+  const tasks = yield select(selectTasks);
+  yield call(saveTasksInLocalStorage, tasks);
+}
+
+export function* tasksSaga() {
   console.log("Saga jest podlaczona!");
   yield debounce(2000, fetchExampleTasks.type, fetchExampleTasksHendler);
+  yield takeEvery("*", saveTasksInLocalStorageHandler);
 }

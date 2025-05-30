@@ -22,16 +22,16 @@ export const Item = styled.li`
     display: none;
   }
 
-  ${({ hidden }) =>
-    hidden &&
+  ${({ $hidden }) =>
+    $hidden &&
     css`
       display: none;
     `}
 `;
 
 export const Content = styled.span`
-  ${({ done }) =>
-    done &&
+  ${({ $done }) =>
+    $done &&
     css`
       text-decoration: line-through;
     `}
@@ -49,14 +49,14 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
 
-  ${({ toggleDone }) =>
-    toggleDone &&
+  ${({ $toggleDone }) =>
+    $toggleDone &&
     css`
       background: ${({ theme }) => theme.colors.green};
     `}
 
-  ${({ remove }) =>
-    remove &&
+  ${({ $remove }) =>
+    $remove &&
     css`
       background: ${({ theme }) => theme.colors.red};
     `}

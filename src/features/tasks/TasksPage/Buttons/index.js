@@ -9,7 +9,7 @@ import {
   toggleHideDone,
   markAllAsDone,
   fetchExampleTasks,
-} from "../tasksSlice";
+} from "../../tasksSlice";
 
 const Buttons = () => {
   const areTasksEmpty = useSelector(selectAreTasksEmpty);

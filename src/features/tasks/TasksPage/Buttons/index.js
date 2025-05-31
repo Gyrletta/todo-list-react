@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Wrapper, Button } from "./styled";
+import { Wrapper } from "./styled";
+import Button from "../Button";
 import {
   selectHideDone,
   selectIsEveryTaskDone,
   selectAreTasksEmpty,
-  selectTasks,
   toggleHideDone,
   markAllAsDone,
   fetchExampleTasks,
